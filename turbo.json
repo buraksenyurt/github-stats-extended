@@ -1,10 +1,12 @@
 {
   "$schema": "./node_modules/turbo/schema.json",
   "globalDependencies": ["tsconfig.base.json"],
+  "globalEnv": ["PAT_1"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["build/**"]
+      "outputs": ["build/**"],
+      "env":["PAT_1"]
     },
     "lint": {
       "dependsOn": ["^build"]
